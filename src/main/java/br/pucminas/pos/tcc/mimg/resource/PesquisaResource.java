@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(value = "http://localhost:4200")
 @RequestMapping(value = "/indicadores")
 public class PesquisaResource {
 

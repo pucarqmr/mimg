@@ -5,16 +5,23 @@ spring:
   application:
     name: georeferenciamento-service
 
+#eureka:
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8302/eureka/
+#  instance:
+#    hostname: localhost
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 2
+
 eureka:
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+    healthcheck:
+      enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8302/eureka/
-  instance:
-    hostname: localhost
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
+      defaultZone: https://sgim-eureka-service.herokuapp.com/
     
 ribbon:
   eureka:
